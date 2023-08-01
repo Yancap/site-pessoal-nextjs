@@ -1,0 +1,101 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.menu{
+    @include background-container;
+    height: 30vh;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 4.725vh;
+    padding: 2px 4px;
+    animation: open .25s forwards;
+    @keyframes open {
+        from{
+            height: 0;
+            opacity: 0;
+        }
+        to{
+            height: 30vh;
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        box-sizing: border-box;
+        position: relative;
+        left: initial;
+        bottom: initial;
+        height: 100%;
+        width: 100%;
+        animation: none;
+        padding: 10px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-top: 3px solid #FFFFFF;
+    }
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    gap: 2px;
+    div[data-desktop]{
+        align-self: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 14px;
+        height: 100%;
+        div:nth-child(1){
+            width: 20%;
+            height: 24px;
+        }
+        div:nth-child(2){
+            display: flex;
+            align-items: center;
+            span{
+                color: $color-primary;
+            }
+        }
+        div:nth-child(3){
+            background-color: #A9A8C8;
+        }
+    }
+    div[data-desktop]:hover{
+        span{
+            color: #fff !important;
+        }
+        
+    }
+    @media screen and (max-width: 500px) {
+        box-sizing: border-box;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        height: 100%;
+        > div{
+            @include background-container;
+            background-color: #8F8ECD;
+            padding: 2px 4px;
+            position: relative;
+            span{
+                position: absolute;
+                z-index: 100;
+            }
+            &:hover{
+                background-color: #21225B;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+    @media screen and (max-width: 360px){
+        span{
+            font-size: 16px;
+        }
+    }
+}

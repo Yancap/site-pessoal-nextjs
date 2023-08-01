@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+SC&family=VT323&display=swap');
+
+$color-primary:#232033;
+$color-secondary:#F0EFF7;
+
+
+
+$color-hover-program: rgba(109, 92, 216, 0.43);
+
+$font-family-primary: 'VT323', 'Montserrat', Helvetica, sans-serif;
+$font-family-secondary: 'Montserrat', Helvetica, sans-serif;
+$font-family-tertiary: 'Bungee Shade';
+$font-family-display: 'Noto Sans SC';
+
+
+$bg-default: linear-gradient(106.48deg, #FC89F0 1.33%, #898EFC 98.15%);
+$bg-container-primary:#B4B3BD;
+$bg-container-secondary: #9391A2;
+
+$z-index-window: 300;
+$z-index-grid: 20;
+$z-index-base-window: 10;
+
+$height-window-content: calc( 100% - 22px - 71px - 5px);
